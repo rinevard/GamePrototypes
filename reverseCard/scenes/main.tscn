@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://w2ice8um36o8"]
+
+[ext_resource type="PackedScene" uid="uid://co8gs1q832dce" path="res://scenes/cardboard/card_board.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://b21qj373tkd4d" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://ban81rxsnwdyv" path="res://scripts/game_manager.gd" id="2_0wfyh"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_sugp2")
+
+[node name="GameBoard" parent="." instance=ExtResource("1_o5qli")]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2_0wfyh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 665.0
+offset_top = 5.0
+offset_right = 964.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 20
+text = "点击来翻开两张牌以开始游戏
+
+拖动：
+把友方角色拖到别的地方来交互
+与未翻开的牌交互：翻开
+与敌人交互：攻击
+与友方交互：换位
+与空位交互：移动
+
+空格：
+回合结束"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 679.0
+offset_top = 390.0
+offset_right = 785.0
+offset_bottom = 424.0
+focus_mode = 0
+text = "重新开始"
+
+[connection signal="pressed" from="Button" to="." method="_restart_game"]

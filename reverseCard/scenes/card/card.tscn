@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d27lj6bhjv0qs"]
+
+[ext_resource type="Texture2D" uid="uid://bh13ymvpue1g4" path="res://assets/card/cardbg.png" id="1_imta7"]
+[ext_resource type="Script" uid="uid://lq8cvnfof7gn" path="res://scripts/card/card.gd" id="1_vtcvk"]
+[ext_resource type="Texture2D" uid="uid://ijehj3im258m" path="res://assets/card/backface.png" id="2_imta7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0ojx"]
+size = Vector2(128, 128)
+
+[node name="Card" type="Area2D"]
+script = ExtResource("1_vtcvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s0ojx")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Cardbg" type="Sprite2D" parent="Visuals"]
+scale = Vector2(8, 8)
+texture = ExtResource("1_imta7")
+
+[node name="BackFace" type="Sprite2D" parent="Visuals"]
+scale = Vector2(8, 8)
+texture = ExtResource("2_imta7")
+
+[node name="FrontFace" type="Sprite2D" parent="Visuals"]
+scale = Vector2(8, 8)
+
+[node name="Label" type="Label" parent="Visuals"]
+offset_left = -61.0
+offset_top = -66.0
+offset_right = 62.0
+offset_bottom = 61.0
+text = "AP:-1
+
+
+
+ATK:11      HP:19"
