@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjw4346j10u0k"]
+
+[ext_resource type="Texture2D" uid="uid://iekwlnxh1maf" path="res://assets/arts/player/Player.png" id="1_mg7rn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_punsf"]
+size = Vector2(128, 256)
+
+[node name="MirrorShadow" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.60933, 0.60933, 0.60933, 0.203922)
+texture = ExtResource("1_mg7rn")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_punsf")

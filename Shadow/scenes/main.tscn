@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://c34jr25mq3idy"]
+
+[ext_resource type="PackedScene" uid="uid://b5gaohtf8iefk" path="res://scenes/environment/ground.tscn" id="1_lbe3k"]
+[ext_resource type="PackedScene" uid="uid://dp6q245eoab1n" path="res://scenes/player/player.tscn" id="2_nbq18"]
+
+[node name="Main" type="Node"]
+
+[node name="Grounds" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Ground" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(1234, 1024)
+scale = Vector2(35.56, 1)
+
+[node name="Ground5" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(-2978, 889)
+scale = Vector2(35.56, 1)
+
+[node name="Ground6" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(4983, 875)
+scale = Vector2(35.56, 1)
+
+[node name="Ground7" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(4470, 226)
+scale = Vector2(35.56, 1)
+
+[node name="Ground8" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(-1859, -202)
+scale = Vector2(35.56, 1)
+
+[node name="Ground2" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(-41.0001, 689)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground3" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(797, 181)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground4" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(1860, 639)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground9" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(1860, -38)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground10" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(1860, -765)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground11" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(1853, -1635)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground12" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(820, -2070)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground13" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(2167, -2697)
+scale = Vector2(3.969, 1.0815)
+
+[node name="Ground14" parent="Grounds" instance=ExtResource("1_lbe3k")]
+position = Vector2(4199, -1131)
+rotation = 1.5708
+scale = Vector2(19.9616, 18.509)
+
+[node name="Player" parent="." instance=ExtResource("2_nbq18")]
+position = Vector2(588, 706)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 64
+text = "操作说明：
+wasd移动，空格跳跃
+J：第一次按下记录位置，再次按下换位，shift+J消除它
+K：第一次按下记录行为，再次按下开始复读，继续按下换位，shift+K消除它
+L：第一次按下记录轨迹，再次按下开始复读，继续按下换位，shift+L消除它
+I：和在你身边打转的影子换位"

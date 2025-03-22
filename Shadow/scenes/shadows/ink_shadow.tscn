@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://celmmujyl8u8l"]
+
+[ext_resource type="Texture2D" uid="uid://iekwlnxh1maf" path="res://assets/arts/player/Player.png" id="1_47vaf"]
+
+[node name="InkShadow" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.6)
+scale = Vector2(1, 0.5)
+texture = ExtResource("1_47vaf")

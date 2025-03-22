@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://biynif1kos1ad"]
+
+[ext_resource type="Script" uid="uid://byo8q4i0trni6" path="res://scenes/shadows/imitation_shadow.gd" id="1_voxsx"]
+[ext_resource type="PackedScene" uid="uid://bavkqly6p0cwh" path="res://scenes/components/player_action_component.tscn" id="2_skn7y"]
+[ext_resource type="Texture2D" uid="uid://iekwlnxh1maf" path="res://assets/arts/player/Player.png" id="3_tfcbt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fju0"]
+size = Vector2(128, 256)
+
+[node name="ImitationShadow" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_voxsx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.290196, 0.290196, 0.741176, 1)
+texture = ExtResource("3_tfcbt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4fju0")
+
+[node name="PlayerActionComponent" parent="." node_paths=PackedStringArray("character_body") instance=ExtResource("2_skn7y")]
+character_body = NodePath("..")
