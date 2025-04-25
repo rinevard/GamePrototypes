@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfrgnu46kjnl8"]
+
+[ext_resource type="Script" uid="uid://ch6adf3hs00h5" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Texture2D" uid="uid://v148tbvi7pad" path="res://assets/tiles.png" id="2_dovo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(8, 8)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_8afob")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dovo2")
+region_enabled = true
+region_rect = Rect2(31, 1, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dovo2")

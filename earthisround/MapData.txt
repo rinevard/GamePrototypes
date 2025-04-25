@@ -1,0 +1,7 @@
+$ln;MainWorld
+[0,0,0]
+1,-1,0,0|||:uxq1aiqntvbj
+[1,0,0]
+0,0,1,0|||:dernr78le8goa
+[0,1,0]
+0,0,0,-1|||:uxq1aiqntvbj

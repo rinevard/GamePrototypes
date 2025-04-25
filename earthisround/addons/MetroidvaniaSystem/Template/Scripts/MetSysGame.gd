@@ -1,6 +1,7 @@
 ## Class designed for use in main game scenes.
 ##
 ## MetSysGame is responsible for map management and player tracking. You can extend it by adding MetSysModules.
+class_name MetSysGame
 extends Node
 
 const MetSysModule = preload("res://addons/MetroidvaniaSystem/Template/Scripts/MetSysModule.gd")
