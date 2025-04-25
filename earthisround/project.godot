@@ -13,3 +13,12 @@ config_version=5
 config/name="EarthIsRound"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+MetSys="*res://addons/MetroidvaniaSystem/Nodes/Singleton.tscn"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/MetroidvaniaSystem/EditorExtension/plugin.cfg", "res://addons/MetroidvaniaSystem/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
