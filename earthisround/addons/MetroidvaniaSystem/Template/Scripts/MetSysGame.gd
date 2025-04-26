@@ -13,7 +13,7 @@ var map_changing: bool
 var modules: Array[MetSysModule]
 
 ## Emitted when [method load_room] has loaded a room. You can use it when you want to call some methods after loading a room (e.g. positioning the player).
-signal room_loaded
+signal room_loaded()
 
 ## Sets the node to be tracked by this class. When player was assigned, [method MetroidvaniaSystem.set_player_position] will be called automatically at the end of every physics frame, updating the player position.
 func set_player(p_player: Node2D):
