@@ -7,6 +7,6 @@
 script = ExtResource("1_sugp2")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(40, 61)
+position = Vector2(80, 59)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

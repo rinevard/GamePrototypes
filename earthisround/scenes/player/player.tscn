@@ -10,6 +10,13 @@ size = Vector2(8, 8)
 collision_mask = 2
 script = ExtResource("1_8afob")
 
+[node name="ClearRange" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.407843)
+scale = Vector2(4, 4)
+texture = ExtResource("2_dovo2")
+region_enabled = true
+region_rect = Rect2(31, 11, 8, 8)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_dovo2")
 region_enabled = true
